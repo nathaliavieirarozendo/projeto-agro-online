@@ -1,0 +1,85 @@
+.background-degrade {
+    height: 420px;
+    background-image: linear-gradient(#8ac3ff,#007bff);
+}
+
+.icon-home{
+    width: 100%;
+    max-width: 120px;
+    height: 100%;
+    max-height: 120px;
+    margin-top: 20px;
+}
+
+.box-icon {
+    width: 160px;
+    height: 160px;    
+    border-radius: 50%;
+    background-color: white;
+}
+
+.img-icon-position {
+    margin-top: -105px;
+    height: auto;
+}
+
+.texto-personalizado {
+    width: 100%;
+    max-width: 800px;
+    padding: 40px 0 0 4%;
+}
+
+.title {
+    font-size: 25pt;
+    color: white;
+}
+
+.title-blue {
+    font-size: 22pt;
+    color: #014fa2;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 960px) {
+    .texto-personalizado {
+        width: 90%;
+    }
+    .background-degrade{
+        height: 460px;
+    }
+}
+
+@media screen and (max-width: 650px){
+    .background-degrade{
+        height: 400px;
+    }
+    .title-blue {
+        font-size: 21pt;
+    }
+
+}
+
+@media screen and (max-width: 520px){
+    .background-degrade{
+        height: 380px;
+    }
+    .title-blue {
+        font-size: 16pt;
+    }
+    .title{
+        font-size: 18pt;
+    }
+}
+
+@media screen and (max-width: 370px){
+    .background-degrade{
+        height: 370px;
+    }
+    .title-blue {
+        font-size: 14pt;
+    }
+    .title{
+        font-size: 15pt;
+    }
+
+}

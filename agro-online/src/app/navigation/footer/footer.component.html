@@ -1,0 +1,22 @@
+<br><br>
+<div class="footer" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="space-evenly center" fxLayoutAlign.xs="space-evenly center">
+    <div fxLayoutAlign="start center">
+        <mat-list role="list" class="rodape" style="display:-webkit-inline-flex">
+            <mat-list-item role="listitem"><button [routerLink]="['/duvidas-comuns']" mat-button>Dúvidas Comuns</button></mat-list-item>
+            <mat-list-item role="listitem"><button [routerLink]="['']" mat-button>Termos e Condições</button></mat-list-item>
+            <mat-list-item role="listitem"><button [routerLink]="['']" mat-button>Termos de Privacidade</button></mat-list-item>
+        </mat-list>
+    </div>
+    
+    
+    <div fxLayoutAlign="end center">
+        <br>
+        <a [routerLink]="[ '' ]">
+            <img [src]="logoGovSp" alt="Governo do Estado de São Paulo" style="text-align: left;">
+        </a>
+    </div>
+</div>
+<div style="display: flex">
+    <div class="bg-footer"></div>
+    <div class="bg-footer-radius"></div>
+</div>

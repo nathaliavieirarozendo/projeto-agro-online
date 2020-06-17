@@ -1,0 +1,19 @@
+.footer{
+    background-color:white;
+    padding-bottom: 1%;
+    display:-webkit-inline-box;
+}
+
+.bg-footer {
+    width: 99%;
+    height: 10px;
+    background-color: #014fa2;
+}
+
+.bg-footer-radius {
+    width: 1%;
+    background-color: #014fa2;
+    border-radius: 0 0 100% 0;
+    height: 10px;
+}
+

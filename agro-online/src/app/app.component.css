@@ -1,0 +1,57 @@
+mat-sidenav-container, mat-sidenav-content, mat-sidenav {
+    height: 100%;
+}  
+.bg-azul-gov {
+    color: #fff;
+    background: #014fa2 url(/assets/imagens/bandeira-separa.jpg) no-repeat right top;
+    height: 83px;
+    margin-left: 0%;
+
+       
+   
+}
+.menu-center{
+    width: 50%;
+    margin: 0 auto;
+}
+ 
+mat-sidenav {
+    width: 250px;
+}
+
+html, body { 
+    margin: 0 auto;
+    height: 100%;
+    background-color: white;
+}
+
+.clear{
+    clear: both;
+}
+
+.toolbar {
+    min-height: 50px;
+}
+
+.toolbar-row {
+    height: 50px;
+}
+
+.mat-chip-menu {
+    margin-left: 20px !important;
+    margin-top: 10px !important;
+}
+
+.color-text-header {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #014fa2;
+    font-size: 28pt;
+    font-weight: bold;
+}
+
+
+@media screen and (max-width: 400px){
+    .color-text-header{
+        font-size: 16pt;
+    }
+}

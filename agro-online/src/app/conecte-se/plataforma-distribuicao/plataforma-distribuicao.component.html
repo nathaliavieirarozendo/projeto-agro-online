@@ -1,0 +1,113 @@
+<section class="main-max">
+ 
+    <h2 class="title text-center">Sou Plataforma Distribuição</h2>
+    <form [formGroup]="cadastroPlatDistribuicao" (ngSubmit)="cadastrar()" class="form" style="margin-left:180px;">
+        <div>
+            <span>* Dados obrigatórios</span>
+        </div>
+        <div>
+            <mat-form-field appearance="standard" fxFlex="100%" fxFlex.gt-sm="60%">
+                <mat-label>Nome *</mat-label>
+                <input matInput formControlName="nome" placeholder="Digite seu nome">
+                <mat-error>
+                    <span *ngIf="!cadastroPlatDistribuicao.get('nome').valid">Por favor, digite seu nome.</span>
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <br>
+        <div>
+            <mat-form-field appearance="standard" fxFlex="100%" fxFlex.gt-sm="60%">
+                <mat-label>CPF/CNPJ *</mat-label>
+                <input matInput formControlName="cpfCnpj" placeholder="Digite seu CPF ou CNPJ">
+                <mat-error>
+                    <span *ngIf="!cadastroPlatDistribuicao.get('cpfCnpj').valid">Por favor, digite CPF ou CNPJ.</span>
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <br>
+        <div>
+            <mat-form-field appearance="standard" fxFlex="100%" fxFlex.gt-sm="60%">
+                <mat-label>Representante *</mat-label>
+                <input matInput formControlName="representante" placeholder="Digite o nome do Representante">
+                <mat-error>
+                    <span *ngIf="!cadastroPlatDistribuicao.get('representante').valid">Por favor, digite o nome do Representante.</span>
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <br>
+        <div>
+            <p>Como sua plataforma funciona?</p>
+            <p><mat-slide-toggle color="primary" formControlName="conectaConsumidorComercio"></mat-slide-toggle> Conectamos consumidores e comércio local</p>
+            <p><mat-slide-toggle color="primary" formControlName="conectafeiranteCOnsumidores"></mat-slide-toggle> Conectamos feirantes e consumidores</p>
+            <p><mat-slide-toggle color="primary" formControlName="solucoesLogisticaGrandesCargas"></mat-slide-toggle> Temos soluções de logística e integração de GRANDES cargas</p>
+            <p><mat-slide-toggle color="primary" formControlName="solucoesLogisticaPequenasCargas"></mat-slide-toggle> Temos soluções de logística e integração de PEQUENAS cargas</p>
+            <p><mat-slide-toggle color="primary" formControlName="solucaoIntegracao"></mat-slide-toggle> Oferecemos solução de integração de pequenos produtores e comércio local</p>
+            <p><mat-slide-toggle color="primary" formControlName="vendoProducaoAssociacao"></mat-slide-toggle> Vendo minha produção para associação ou cooperativa</p>
+            <p><mat-slide-toggle color="primary" formControlName="solucoesAssociacoes"></mat-slide-toggle> Oferecemos soluções para associações ou cooperativas</p>
+        </div>
+        <div>
+            <mat-form-field appearance="standard" fxFlex="100%" fxFlex.gt-sm="60%">
+                <mat-label>Oferecemos outro tipo de solução. Qual?:</mat-label>
+                <input matInput formControlName="outroTipoSolucao" placeholder="Informe outro tipo de solução">
+            </mat-form-field>
+        </div>
+        <br>
+        <div>
+            <mat-form-field appearance="standard" fxFlex="100%" fxFlex.gt-sm="60%">
+                <mat-label>Onde você atua na cidade de São Paulo e Região? *</mat-label>
+                <input matInput formControlName="ondeAtua" placeholder="Digite a cidade de atuação">
+                <mat-error>
+                    <span *ngIf="!cadastroPlatDistribuicao.get('ondeAtua').valid">Por favor, informe sua cidade de atuação.</span>
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <br>
+        <div>
+            <mat-form-field appearance="standard" fxFlex="100%" fxFlex.gt-sm="60%">
+                <mat-label>Whatsapp *</mat-label>
+                <input matInput formControlName="whatsapp" placeholder="Digite seu número de Whatsapp">
+                <mat-error>
+                    <span *ngIf="!cadastroPlatDistribuicao.get('whatsapp').valid">Por favor, digite seu número de Whatsapp.</span>
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <br>
+        <div>
+            <mat-form-field appearance="standard" fxFlex="100%" fxFlex.gt-sm="60%">
+                <mat-label>Localização</mat-label>
+                <input matInput formControlName="localizacao" placeholder="Informe sua localização">
+            </mat-form-field>
+        </div>
+        <br>
+        <div>
+            <mat-form-field appearance="standard" fxFlex="100%" fxFlex.gt-sm="60%">
+                <mat-label>Website</mat-label>
+                <input matInput formControlName="website" placeholder="Informe seu website">
+            </mat-form-field>
+        </div>
+        <br>
+        <div>
+            <mat-form-field appearance="standard" fxFlex="100%" fxFlex.gt-sm="60%">
+                <mat-label>Credenciais especiais</mat-label>
+                <input matInput formControlName="credenciaisEspeciais" placeholder="Digite as credenciais especiais">
+            </mat-form-field>
+        </div>
+        <br>
+        <br class="clear">
+        <div>
+            <p>Você está vinculado a alguma cooperativa ou associação?</p>
+            <mat-slide-toggle [formControl]="vinculoAssociacao" color="primary">Sim</mat-slide-toggle>
+        </div>
+        <div>
+            <mat-form-field *ngIf="vinculoAssociacao.value" appearance="standard" fxFlex="100%" fxFlex.gt-sm="60%">
+                <mat-label>Qual?</mat-label>
+                <input matInput formControlName="nomeAssociacao" placeholder="Informe a Associação vinculada">
+            </mat-form-field>
+        </div>
+        <br>
+        <div>
+            <button mat-stroked-button color="black" type="submit" style="margin-left:200px;">Cadastrar</button>
+        </div>
+        <br>
+    </form>
+</section>

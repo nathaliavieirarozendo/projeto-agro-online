@@ -1,0 +1,75 @@
+<section class="background-degrade">
+    <div class="texto-personalizado">
+        <h2 class="text-uppercase text-left title">Trabalhar para proteger</h2><br>
+        <h2 class="text-uppercase text-right title">A vida e os empregos.</h2>
+    </div>
+    <div class="texto-personalizado">
+        <h2 class="text-uppercase text-end title-blue">Esse é o nosso compromisso!</h2><br>
+    </div>
+</section>
+<section class="img-icon-position">
+    <div class="flex-flow" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="space-evenly center" fxLayoutAlign.xs="space-evenly center">
+        <div class="box" fxLayoutAlign="center center">
+            <a [routerLink]="[ '/comprador']" class="box-icon">
+                <img src="/assets/imagens/icon-home-1.png" alt="Comprador" class="icon-home" style="width: 100px;height: 100px;">
+            </a>
+        </div>
+        
+        <div class="box" fxLayoutAlign="center center">
+            <a [routerLink]="[ '/fornecedor']" class="box-icon">
+                <img src="/assets/imagens/icon-home-2.png" alt="Vendedor" class="icon-home">
+            </a>
+        </div>
+        
+        <div class="box" fxLayoutAlign="center center">
+            <a [routerLink]="[ '/transportador']" class="box-icon">
+                <img src="/assets/imagens/icon-home-3.png" alt="Transportador" class="icon-home">
+            </a>
+        </div>
+        
+        <div class="box" fxLayoutAlign="center center">
+            <a [routerLink]="[ '/ong']" class="box-icon">
+                <img src="/assets/imagens/icon-home-4.png" alt="ONG" class="icon-home">
+            </a>
+        </div>
+        
+        <div class="box" fxLayoutAlign="center center">
+            <a [routerLink]="[ '/plataforma-distribuicao']" class="box-icon">
+                <img src="/assets/imagens/icon-home-5.png" alt="Plataforma de Distribuição" class="icon-home">
+            </a>
+        </div>
+    </div>
+</section>
+<br class="clear">
+<section class="space-mobile">
+    <h2 class="text-uppercase title-blue text-center">Mapa do Ecossistema</h2><br>
+
+    <div fxLayout="column" fxLayout.gt-sm="row" fxLayoutAlign.gt-sm="space-evenly center" fxLayoutAlign="center center">
+        <div class="pesquisa" fxFlex.gt-sm="28%" fxFlex="98%">
+            <app-pesquisa-mapa></app-pesquisa-mapa>
+        </div>
+        <div fxFlex.gt-sm="50%" fxFlex="90%" fxFlexFill class="mapa" fxLayoutAlign="center center">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14631.713390052302!2d-46.6353093!3d-23.5350794!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x831e609593a69549!2zRXN0YcOnw6NvIGRhIEx1eg!5e0!3m2!1spt-BR!2sbr!4v1588018246178!5m2!1spt-BR!2sbr" class="mapa" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" height="400px"></iframe>
+        </div>
+        <div class="pesquisa" fxFlex="100%" fxFlex.gt-sm="20%" fxLayoutAlign="center center" fxLayout="column">
+            <h2 fxLayoutAlign="start start" class="title-blue text-center">Legenda</h2>
+            <div fxLayoutAlign="start start" fxLayout="column">
+                <div style="display: flex;">
+                    <div class="icon-circle icon-circle-green"></div>&nbsp; 
+                    Vendedores
+                </div>
+                <br>
+                <div style="display: flex;">
+                    <div class="icon-circle icon-circle-orange"></div>&nbsp;
+                    Compradores
+                </div>
+                <br>
+                <div style="display: flex;">
+                    <div class="icon-circle icon-circle-blue"></div>&nbsp;
+                    Transportadores
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+</section>

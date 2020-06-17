@@ -1,0 +1,59 @@
+<div>
+  <header>
+    <mat-toolbar fxLayout="row" fxLayoutAlign="space-evenly center" style="background-color: white;">
+
+      <mat-toolbar-row fxFlex="40%" fxLayoutAlign="end end" class="bg-azul-gov" style="width:5%;"></mat-toolbar-row>
+
+      <mat-toolbar-row fxFlex="60%" fxLayoutAlign="space-around center">
+        <div class="color-text-header" fxShow.gt-sm="true" fxHide>Agricultura e Abastecimento</div>
+        <img src="/assets/imagens/logotipo-2019-govsp.jpg" alt="Governo do Estado de São Paulo">
+      </mat-toolbar-row>
+
+    </mat-toolbar>
+
+    <mat-toolbar fxShow="true" fxHide.gt-sm class="bg-white">
+      <mat-toolbar-row >
+        <div class="color-text-header margin-auto">Agricultura e Abastecimento</div>
+      </mat-toolbar-row>
+    </mat-toolbar>
+
+    <mat-toolbar class="toolbar">
+      <mat-toolbar-row class="toolbar-row">
+        <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
+          <mat-icon>menu</mat-icon>
+        </button>
+        <app-header class="menu-center"></app-header>
+      </mat-toolbar-row>
+    </mat-toolbar>
+    
+  </header>
+  <mat-sidenav-container fxFlexFill class="bg-white">
+    <mat-sidenav #sidenav>
+      <mat-list role="list">
+        <mat-list-item role="listitem" (click)="sidenav.toggle()" [routerLink]="['']" mat-button>Home</mat-list-item>
+        <mat-list-item role="listitem" (click)="sidenav.toggle()" [routerLink]="['/apresentacao']" mat-button>Apresentação</mat-list-item>
+        <mat-list-item role="listitem" (click)="sidenav.toggle()" [routerLink]="['/mapa']" mat-button>Mapa</mat-list-item>
+        <mat-list-item role="listitem" (click)="sidenav.toggle()" [routerLink]="['/duvidas-comuns']" mat-button>Dúvidas Comuns</mat-list-item>
+        <mat-chip-list>
+          <mat-chip class="cursor-pointer mat-chip-menu" [matMenuTriggerFor]="cadAgro" mat-button>Cadastre-se</mat-chip>
+        </mat-chip-list>
+        <mat-menu #cadAgro="matMenu">
+          <button [routerLink]="['/comprador']" mat-menu-item (click)="sidenav.toggle()">Sou Comprador</button>
+          <button [routerLink]="['/fornecedor']" mat-menu-item (click)="sidenav.toggle()">Sou Vendedor</button>
+          <button [routerLink]="['/transportador']" mat-menu-item (click)="sidenav.toggle()">Sou Transportador</button>
+          <button [routerLink]="['/plataforma-distribuicao']" mat-menu-item (click)="sidenav.toggle()">Sou Plataforma de Distribuição</button>
+          <button [routerLink]="['/ong']" mat-menu-item (click)="sidenav.toggle()">Sou uma ONG (Receber Doações)</button>
+        </mat-menu>
+      </mat-list>
+    </mat-sidenav>
+    <mat-sidenav-content fxFlexFill>
+      <main role="main">
+        <router-outlet></router-outlet>
+      </main>
+      <footer>
+        <app-footer></app-footer>
+      </footer>
+    </mat-sidenav-content>
+    
+  </mat-sidenav-container>
+</div>

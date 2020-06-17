@@ -1,0 +1,125 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.margin-auto{
+    margin: 0 auto;
+}
+
+.text-center {
+    text-align: center;
+}
+.text-justify {
+    text-align: justify;
+}
+.text-start{
+    text-align: start;
+}
+.text-end{
+    text-align: end;
+}
+.text-left{
+    text-align: left;
+}
+.text-right{
+    text-align: right;
+}
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+main {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.main-max {
+    max-width: 960px;
+    margin:  0 auto;
+    padding: 2%;
+}
+
+.bg-white {
+    background-color: white;
+}
+
+.space-mobile{
+    width: 96%;
+    margin: 0 auto;
+}
+@media screen and (max-width: 960px) {
+    .mat-expansion-panel-header {
+        padding: 20px 24px !important;
+    }
+ }
+
+ .box{
+    width: 100% !important;
+    max-width: 200px;
+    text-align: center;
+    margin: 0 10px 3% 10px;
+    height: auto;
+}
+
+.flex-flow {
+    flex-flow: row wrap;
+}
+
+@media screen and (max-width: 600px) {
+    .box{
+        width: 95%;
+    }
+
+    .mapa {
+        margin: 0 10px;
+    }
+}
+
+
+@media screen and (max-width: 960px) {
+    .mapa {
+        margin: 20px 0px;
+    }
+}
+
+.mapa {
+    width: 100%;
+    max-width: 960px;
+}
+
+.icon-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.icon-circle-green{
+    background-color: green;
+}
+
+.icon-circle-blue {
+    background-color: blue;
+}
+
+.icon-circle-orange {
+    background-color: orange;
+}
+
+.form {
+    width: 96%;
+    padding: 2%;
+}
+
+.mat-radio-button ~ .mat-radio-button {
+    margin-left : 16px ;
+ }
+
+ .pesquisa{
+     width: 100%;
+     max-width: 960px;
+ }
+
+ .clear {
+     clear: both;
+ }

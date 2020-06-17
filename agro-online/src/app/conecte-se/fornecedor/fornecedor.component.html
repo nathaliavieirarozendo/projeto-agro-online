@@ -1,0 +1,127 @@
+<section class="main-max">
+    
+    <h2 class="title text-center">Sou Vendedor</h2>
+    <form [formGroup]="cadastroFornecedor" (ngSubmit)="cadastrar()" class="form" style="margin-left:180px;">
+        <div>
+            <span>* Dados obrigatórios</span>
+        </div>
+        <div>
+            <mat-form-field appearance="standard" fxFlex="100%" fxFlex.gt-sm="60%">
+                <mat-label>Nome*</mat-label>
+                <input matInput formControlName="nome" placeholder="Digite seu nome">
+                <mat-error>
+                    <span *ngIf="!cadastroFornecedor.get('nome').valid">Por favor, digite seu nome.</span>
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <br>
+        <div>
+            <mat-radio-group color="primary" formControlName="tipoPessoa" aria-label="Selecione uma Opção" required>
+                <mat-radio-button value="Pessoa Física">Pessoa Física</mat-radio-button>
+                <mat-radio-button value="Pessoa Jurídica">Pessoa Jurídica</mat-radio-button>
+            </mat-radio-group>
+        </div>
+        <br>
+        <div>
+            <mat-form-field appearance="standard" fxFlex="100%" fxFlex.gt-sm="60%">
+                <mat-label>CPF/CNPJ*</mat-label>
+                <input matInput formControlName="cpfCnpj" placeholder="Digite seu CPF ou CNPJ">
+                <mat-error>
+                    <span *ngIf="!cadastroFornecedor.get('cpfCnpj').valid">Por favor, digite CPF ou CNPJ.</span>
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <br>
+        <div>
+            <mat-form-field appearance="standard" fxFlex="100%" fxFlex.gt-sm="60%">
+                <mat-label>Representante*</mat-label>
+                <input matInput formControlName="representante" placeholder="Digite o nome do Representante">
+                <mat-error>
+                    <span *ngIf="!cadastroFornecedor.get('representante').valid">Por favor, digite o nome do Representante.</span>
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <br>
+        <div>
+            <p>Como você trabalha?</p>
+            <p><mat-slide-toggle color="primary" formControlName="produtorRural"></mat-slide-toggle> Sou Produtor Rural</p>
+            <p><mat-slide-toggle color="primary" formControlName="vendaProducao"></mat-slide-toggle> Vendo minha produção no Ceasa e Ceagesp</p>
+            <p><mat-slide-toggle color="primary" formControlName="possuiCaminhao"></mat-slide-toggle> Tenho caminhão e faço entregas</p>
+            <p><mat-slide-toggle color="primary" formControlName="contrataCaminhao"></mat-slide-toggle> Contrato caminhão para entregas</p>
+            <p><mat-slide-toggle color="primary" formControlName="possuiLoja"></mat-slide-toggle> Tenho loja própria</p>
+            <p><mat-slide-toggle color="primary" formControlName="vendaParaAssociacao"></mat-slide-toggle> Vendo minha produção para associação ou cooperativa</p>
+            <p><mat-slide-toggle color="primary" formControlName="todaProducao"></mat-slide-toggle> Toda a sua produção, ou a maior parte da produção</p>
+            <p><mat-slide-toggle color="primary" formControlName="parteProducao"></mat-slide-toggle> Uma parte pequena ou pouco da sua produção</p>
+        </div>
+        <div>
+            <mat-form-field appearance="standard" fxFlex="100%" fxFlex.gt-sm="60%">
+                <mat-label>Onde você atua na cidade de São Paulo e Região?*</mat-label>
+                <input matInput formControlName="ondeAtua" placeholder="Digite a cidade de atuação">
+                <mat-error>
+                    <span *ngIf="!cadastroFornecedor.get('ondeAtua').valid">Por favor, informe sua cidade de atuação.</span>
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <br>
+        <div>
+            <mat-form-field appearance="standard" fxFlex="100%" fxFlex.gt-sm="60%">
+                <mat-label>Whatsapp*</mat-label>
+                <input matInput formControlName="whatsapp" placeholder="Digite seu número de Whatsapp">
+                <mat-error>
+                    <span *ngIf="!cadastroFornecedor.get('whatsapp').valid">Por favor, digite seu número de Whatsapp.</span>
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <br>
+        <div>
+            <mat-form-field appearance="standard" fxFlex="100%" fxFlex.gt-sm="60%">
+                <mat-label>Localização</mat-label>
+                <input matInput formControlName="localizacao" placeholder="Informe sua localização">
+            </mat-form-field>
+        </div>
+        <br>
+        <div>
+            <mat-form-field appearance="standard" fxFlex="100%" fxFlex.gt-sm="60%">
+                <mat-label>Produto de Interesse</mat-label>
+                <mat-select produtosInteresse>
+                    <mat-option>Selecione</mat-option>
+                    <mat-option *ngFor="let produto of produtos" [value]="produto">
+                      {{produto}}
+                    </mat-option>
+                  </mat-select>
+            </mat-form-field>
+            
+        </div>
+        <br>
+        <div>
+            <mat-form-field appearance="standard" fxFlex="100%" fxFlex.gt-sm="60%">
+                <mat-label>Website</mat-label>
+                <input matInput formControlName="website" placeholder="Informe seu website">
+            </mat-form-field>
+        </div>
+        <br>
+        <div>
+            <mat-form-field appearance="standard" fxFlex="100%" fxFlex.gt-sm="60%">
+                <mat-label>Credenciais especiais</mat-label>
+                <input matInput formControlName="credencialEspecial" placeholder="Digite as credenciais especiais">
+            </mat-form-field>
+        </div>
+        <br>
+        <br class="clear">
+        <div>
+            <p>Você está vinculado a alguma cooperativa ou associação?</p>
+            <mat-slide-toggle [formControl]="vinculoAssociacao" color="primary">Sim</mat-slide-toggle>
+        </div>
+        <div>
+            <mat-form-field *ngIf="vinculoAssociacao.value" appearance="standard" fxFlex="100%" fxFlex.gt-sm="60%">
+                <mat-label>Qual?</mat-label>
+                <input matInput formControlName="nomeVinculo" placeholder="Informe a Associação vinculada">
+            </mat-form-field>
+        </div>
+        <br>
+        <div>
+            <button mat-stroked-button color="black" type="submit" style="margin-left:200px;">Cadastrar</button>
+        </div>
+        <br>
+    </form>
+</section>

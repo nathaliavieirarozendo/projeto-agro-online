@@ -1,0 +1,10 @@
+.pesquisa{
+    margin: 0 auto;
+    width: 96%;
+}
+
+@media screen and (max-width: 960px) {
+    .pesquisa-home {
+        max-width: 600px !important;
+    }
+}

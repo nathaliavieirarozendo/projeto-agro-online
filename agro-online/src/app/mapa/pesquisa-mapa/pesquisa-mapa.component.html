@@ -1,0 +1,48 @@
+<div class="pesquisa" >
+    <form [formGroup]="pesquisaHome" fxLayout="column" fxFlex="100%">
+        <mat-form-field appearance="standard" fxFlex="100%">
+            <mat-label>Pesquisa</mat-label>
+            <input matInput formControlName="pesquisa" placeholder="Pesquisar">
+            <button mat-icon-button matSuffix>
+                <mat-icon>search</mat-icon>
+            </button>
+        </mat-form-field>
+        <div fxFlex="100%">
+        <h2 class="title-home">Refine sua Pesquisa</h2>
+        <mat-accordion  multi [togglePosition]="'before'">
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Por produto
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                Filtros de Pesquisa
+            </mat-expansion-panel>
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Apenas quem entrega perto de mim
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                Filtros de Pesquisa
+            </mat-expansion-panel>
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Apenas vendedores que emitem NF
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                Filtros de Pesquisa
+            </mat-expansion-panel>
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Outras Opções
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                Filtros de Pesquisa
+            </mat-expansion-panel>
+        </mat-accordion>
+    </div>
+    </form>
+</div>

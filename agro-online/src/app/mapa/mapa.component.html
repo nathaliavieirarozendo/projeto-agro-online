@@ -1,0 +1,36 @@
+<section>
+    <br>
+    <h2 class="title text-center">Mapa do Ecossistema</h2>
+
+    <div class="text-center">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14631.713390052302!2d-46.6353093!3d-23.5350794!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x831e609593a69549!2zRXN0YcOnw6NvIGRhIEx1eg!5e0!3m2!1spt-BR!2sbr!4v1588018246178!5m2!1spt-BR!2sbr" class="mapa" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" height="400px"></iframe>
+    </div>
+    <br>
+    <div class="main-max" fxLayout="column" fxLayout.gt-xs="row" fxLayoutAlign="center center">
+        <div class="pesquisa" fxFlex="100%" fxFlex.gt-sm="70%">
+            <app-pesquisa-mapa></app-pesquisa-mapa>
+        </div>
+        <br>
+        <br>
+        <div class="pesquisa" fxFlex="100%" fxFlex.gt-sm="30%" fxLayoutAlign="center center" fxLayout="column">
+            <h2 fxLayoutAlign="start start" class="title text-center">Legenda</h2>
+            <div fxLayoutAlign="start start" fxLayout="column">
+                <div style="display: flex;">
+                    <div class="icon-circle icon-circle-green"></div>&nbsp; 
+                    Vendedores
+                </div>
+                <br>
+                <div style="display: flex;">
+                    <div class="icon-circle icon-circle-orange"></div>&nbsp;
+                    Compradores
+                </div>
+                <br>
+                <div style="display: flex;">
+                    <div class="icon-circle icon-circle-blue"></div>&nbsp;
+                    Transportadores
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+</section>

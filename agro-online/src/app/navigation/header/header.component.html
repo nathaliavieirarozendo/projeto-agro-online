@@ -1,0 +1,18 @@
+<div fxFlex #sidenav>
+    <div fxLayoutAlign="space-around center" fxShow="true" fxHide.lt-md>
+        <button [routerLink]="['']" mat-button>Home</button>
+        <button [routerLink]="['/apresentacao']" mat-button>Apresentação</button>
+        <button [routerLink]="['/mapa']" mat-button>Mapa</button>
+        <button [routerLink]="['/duvidas-comuns']" mat-button>Dúvidas Comuns</button>
+        <mat-chip-list>
+            <mat-chip class="cursor-pointer" [matMenuTriggerFor]="cadAgro" mat-button>Cadastre-se</mat-chip>
+        </mat-chip-list>
+        <mat-menu #cadAgro="matMenu">
+            <button [routerLink]="['/comprador']" mat-menu-item>Sou Comprador</button>
+            <button [routerLink]="['/fornecedor']" mat-menu-item>Sou Vendedor</button>
+            <button [routerLink]="['/transportador']" mat-menu-item>Sou Transportador</button>
+            <button [routerLink]="['/plataforma-distribuicao']" mat-menu-item>Sou Plataforma de Distribuição</button>
+            <button [routerLink]="['/ong']" mat-menu-item>Sou uma ONG (Receber Doações)</button>
+        </mat-menu>
+    </div>
+</div>
